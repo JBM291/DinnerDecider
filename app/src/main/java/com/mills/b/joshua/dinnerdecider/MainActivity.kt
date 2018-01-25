@@ -7,24 +7,33 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    val foodlist = arrayListOf("Chinese","Hamburger", "Pizza", "Indian")
+    private val foodList = arrayListOf("Chinese","Hamburger", "Pizza", "Indian")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        decideBtnClicked()
+        addBtnClicked()
+    }
 
-        decideBtn.setOnClickListener{
-            val random = Random()
-            val randomFood = random.nextInt(foodlist.count())
-            selectedFoodTxt.text = foodlist[randomFood]
-        }
-
+    fun addBtnClicked(){
         addFoodBtn.setOnClickListener{
             val newFood = addFoodTxt.text.toString()
-
-            if(!newFood.isNullOrBlank() && !foodlist.contains(newFood))
-                    foodlist.add(newFood)
+            if(isGoodData(newFood))
+                foodList.add(newFood)
             addFoodTxt.text.clear()
         }
+    }
+
+    fun decideBtnClicked(){
+        decideBtn.setOnClickListener{
+            val random = Random()
+            val randomFood = random.nextInt(foodList.count())
+            selectedFoodTxt.text = foodList[randomFood]
+        }
+    }
+
+    fun isGoodData(item: String): Boolean{
+        return !item.isNullOrBlank() && !foodList.contains(item)
     }
 }
