@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun isGoodData(item: String): Boolean{
+    private fun  isGoodData(item: String): Boolean{
         return !item.isEmpty() && !foodList.contains(item)
     }
 }
