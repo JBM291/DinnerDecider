@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         addBtnClicked()
     }
 
-    fun addBtnClicked(){
+    private fun addBtnClicked(){
         addFoodBtn.setOnClickListener{
             val newFood = addFoodTxt.text.toString()
             if(isGoodData(newFood))
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun decideBtnClicked(){
+    private fun decideBtnClicked(){
         decideBtn.setOnClickListener{
             val random = Random()
             val randomFood = random.nextInt(foodList.count())
@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun isGoodData(item: String): Boolean{
-        return !item.isNullOrBlank() && !foodList.contains(item)
+    private fun isGoodData(item: String): Boolean{
+        val newData = item.trim()
+        return !newData.isEmpty() && !foodList.contains(newData)
     }
 }
