@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         addFoodBtn.setOnClickListener{
             val newFood = addFoodTxt.text.toString()
             if(isGoodData(newFood))
-                foodList.add(newFood)
+                foodList.add(newFood.trim())
             addFoodTxt.text.clear()
         }
     }
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isGoodData(item: String): Boolean{
-        val newData = item.trim()
-        return !newData.isEmpty() && !foodList.contains(newData)
+        return !item.isEmpty() && !foodList.contains(item)
     }
 }
