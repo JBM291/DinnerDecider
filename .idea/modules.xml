@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DinnerDecider.iml" filepath="$PROJECT_DIR$/DinnerDecider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DinnerDecider.iml" filepath="$PROJECT_DIR$/.idea/DinnerDecider.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

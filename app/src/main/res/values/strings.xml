@@ -4,4 +4,5 @@
     <string name="app_DecideButton">DECIDE!</string>
     <string name="app_AddFoodButton">ADD FOOD</string>
     <string name="HintText">Add new food...</string>
+    <string name="photoDis">Plate</string>
 </resources>
